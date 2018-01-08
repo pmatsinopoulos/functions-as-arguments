@@ -10,7 +10,7 @@ def foo(number1, number2)
   number1 + number2
 end
 
-# which returns the sum of two numbers. We have two ways to call it:
+# which returns the sum of two numbers. We have three ways to call it:
 
 # Call example 1:
 result = foo(5, 3)
@@ -21,6 +21,13 @@ puts result # prints 8
 
 a_method_object = method(:foo)
 result = a_method_object.call(5, 3)
+
+puts result # prints 8
+
+# or, method 3, we can just call ".(...)"
+
+a_method_object = method(:foo)
+result = a_method_object.(5, 3)
 
 puts result # prints 8
 
